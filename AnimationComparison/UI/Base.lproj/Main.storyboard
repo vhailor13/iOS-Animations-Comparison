@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF1-qb-5IR">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LF1-qb-5IR" customClass="ExampleView1" customModule="AnimationComparison" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="150" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -38,11 +38,31 @@
                                     <constraint firstAttribute="height" constant="150" id="cCS-FO-L70"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVh-F8-hqy" customClass="MacawView" customModule="Macaw">
+                                <rect key="frame" x="16" y="186" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="gZh-Xj-1u8"/>
+                                    <constraint firstAttribute="height" constant="150" id="vcd-LZ-Yo8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wD5-Ku-iqJ" customClass="MacawView" customModule="Macaw">
+                                <rect key="frame" x="174" y="186" width="150" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="AdH-PE-Ar0"/>
+                                    <constraint firstAttribute="height" constant="150" id="TMl-Gz-pXm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LF1-qb-5IR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8Kc-Vh-1kl"/>
                             <constraint firstItem="9dO-Cm-frY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="NgW-Ou-lRW"/>
+                            <constraint firstItem="mVh-F8-hqy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="SK4-T6-GCL"/>
+                            <constraint firstItem="mVh-F8-hqy" firstAttribute="top" secondItem="LF1-qb-5IR" secondAttribute="bottom" constant="16" id="c7G-r7-6qi"/>
+                            <constraint firstItem="wD5-Ku-iqJ" firstAttribute="top" secondItem="9dO-Cm-frY" secondAttribute="bottom" constant="8" id="eFT-FF-bJq"/>
+                            <constraint firstItem="wD5-Ku-iqJ" firstAttribute="leading" secondItem="mVh-F8-hqy" secondAttribute="trailing" constant="8" id="kqZ-cS-M65"/>
                             <constraint firstItem="9dO-Cm-frY" firstAttribute="leading" secondItem="LF1-qb-5IR" secondAttribute="trailing" constant="8" id="w0R-is-z5I"/>
                             <constraint firstItem="LF1-qb-5IR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wJx-3R-abP"/>
                         </constraints>
@@ -50,6 +70,8 @@
                     <connections>
                         <outlet property="cgExample1View" destination="LF1-qb-5IR" id="oUL-dE-TGw"/>
                         <outlet property="cgExample2View" destination="9dO-Cm-frY" id="MUR-kq-KGO"/>
+                        <outlet property="macawExample1" destination="mVh-F8-hqy" id="l8m-Vk-1ot"/>
+                        <outlet property="macawExample2" destination="wD5-Ku-iqJ" id="WoE-zU-Nfq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
