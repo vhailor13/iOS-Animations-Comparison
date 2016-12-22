@@ -15,18 +15,17 @@ class ViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        cgControl.onValueChanged = { value in
+            self.macawControl.value = value
+        }
+        
+        macawControl.onValueChanged = { value in
+            self.cgControl.value = value
+        }
 
     }
     
-//    private func showMacawExample1() {
-//        var radius = 50.0
-//        let circle = Ellipse(cx: radius, cy: radius, rx: radius, ry: radius)
-//        let shape = Shape(form: circle, fill: .none, stroke: Stroke(fill: Color.blue, width: 1.0))
-//        macawExample1.node = shape
-//        
-//        //shape.placeVar.animate(to: Transform.move(dx: 10.0, dy: 10.0))
-//        shape.placeVar.animate(to: Transform.move(dx: 10.0, dy: 10.0), during: 1.0)
-//    }
-
 }
 

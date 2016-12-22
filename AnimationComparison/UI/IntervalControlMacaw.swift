@@ -8,17 +8,24 @@
 
 import Macaw
 
-class IntervalControlMacaw: MacawView, IntervalControl {
+class IntervalControlMacaw: MacawView {
     @IBOutlet weak var internalLabel: UILabel?
     
     var value = 0 {
         didSet {
+            if value == oldValue {
+                return
+            }
+            
             let progress = Double(value) / 25.0
             let angle = 2 * M_PI * progress
             updateInterval(angle: angle)
             updateIntevalLabel(currentValue: value)
+            onValueChanged?(value)
         }
     }
+    
+    var onValueChanged: ( (Int) -> Void )?
     
     @IBAction func onPanAction(recognizer: UIPanGestureRecognizer) {
         let location = recognizer.location(in: self)

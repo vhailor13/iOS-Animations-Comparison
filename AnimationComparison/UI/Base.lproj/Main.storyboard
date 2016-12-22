@@ -24,11 +24,25 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-ag-PNq" customClass="IntervalControlCG" customModule="AnimationComparison" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="150" height="150"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdT-gX-VaP">
+                                        <rect key="frame" x="63" y="52" width="23" height="45.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="rdT-gX-VaP" firstAttribute="centerX" secondItem="Mlb-ag-PNq" secondAttribute="centerX" id="Fhf-aS-eSf"/>
                                     <constraint firstAttribute="width" constant="150" id="K8R-HX-h9Y"/>
+                                    <constraint firstItem="rdT-gX-VaP" firstAttribute="centerY" secondItem="Mlb-ag-PNq" secondAttribute="centerY" id="chI-3T-1Ir"/>
                                     <constraint firstAttribute="height" constant="150" id="zTZ-Bq-2D8"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="internalLabel" destination="rdT-gX-VaP" id="xbQ-Gk-5JW"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Luc-3a-PTd" customClass="IntervalControlMacaw" customModule="AnimationComparison" customModuleProvider="target">
                                 <rect key="frame" x="158" y="20" width="150" height="150"/>
