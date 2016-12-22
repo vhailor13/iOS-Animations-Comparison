@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573525F61E0BD8A700EB4AAB /* IntervalControlMacaw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573525F51E0BD8A700EB4AAB /* IntervalControlMacaw.swift */; };
+		573525F81E0BD8FC00EB4AAB /* IntervalControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573525F71E0BD8FC00EB4AAB /* IntervalControl.swift */; };
 		57B9AC181E0A58DD00CE8B56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9AC0E1E0A58DD00CE8B56 /* AppDelegate.swift */; };
 		57B9AC191E0A58DD00CE8B56 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57B9AC0F1E0A58DD00CE8B56 /* Info.plist */; };
 		57B9AC1A1E0A58DD00CE8B56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B9AC111E0A58DD00CE8B56 /* Assets.xcassets */; };
 		57B9AC1B1E0A58DD00CE8B56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B9AC131E0A58DD00CE8B56 /* LaunchScreen.storyboard */; };
 		57B9AC1C1E0A58DD00CE8B56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57B9AC151E0A58DD00CE8B56 /* Main.storyboard */; };
 		57B9AC1D1E0A58DD00CE8B56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9AC171E0A58DD00CE8B56 /* ViewController.swift */; };
-		57B9AC1F1E0A679300CE8B56 /* ExampleView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9AC1E1E0A679300CE8B56 /* ExampleView1.swift */; };
+		57B9AC1F1E0A679300CE8B56 /* IntervalControlCG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B9AC1E1E0A679300CE8B56 /* IntervalControlCG.swift */; };
 		9CCB427001E536D7F4B9A961 /* Pods_AnimationComparison.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CA9F2CB4C9CD4E84B67DE7 /* Pods_AnimationComparison.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		313409E08BD1018A24ACD33A /* Pods-AnimationComparison.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationComparison.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationComparison/Pods-AnimationComparison.debug.xcconfig"; sourceTree = "<group>"; };
+		573525F51E0BD8A700EB4AAB /* IntervalControlMacaw.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalControlMacaw.swift; sourceTree = "<group>"; };
+		573525F71E0BD8FC00EB4AAB /* IntervalControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalControl.swift; sourceTree = "<group>"; };
 		57B9ABF71E0A56B300CE8B56 /* AnimationComparison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationComparison.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B9AC0E1E0A58DD00CE8B56 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57B9AC0F1E0A58DD00CE8B56 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -26,7 +30,7 @@
 		57B9AC141E0A58DD00CE8B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57B9AC161E0A58DD00CE8B56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57B9AC171E0A58DD00CE8B56 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		57B9AC1E1E0A679300CE8B56 /* ExampleView1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleView1.swift; sourceTree = "<group>"; };
+		57B9AC1E1E0A679300CE8B56 /* IntervalControlCG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalControlCG.swift; sourceTree = "<group>"; };
 		96CA9F2CB4C9CD4E84B67DE7 /* Pods_AnimationComparison.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationComparison.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6000F64880F8DCD20AB7A43 /* Pods-AnimationComparison.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnimationComparison.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnimationComparison/Pods-AnimationComparison.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,7 +90,9 @@
 				57B9AC131E0A58DD00CE8B56 /* LaunchScreen.storyboard */,
 				57B9AC151E0A58DD00CE8B56 /* Main.storyboard */,
 				57B9AC171E0A58DD00CE8B56 /* ViewController.swift */,
-				57B9AC1E1E0A679300CE8B56 /* ExampleView1.swift */,
+				573525F71E0BD8FC00EB4AAB /* IntervalControl.swift */,
+				57B9AC1E1E0A679300CE8B56 /* IntervalControlCG.swift */,
+				573525F51E0BD8A700EB4AAB /* IntervalControlMacaw.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -232,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57B9AC1F1E0A679300CE8B56 /* ExampleView1.swift in Sources */,
+				573525F61E0BD8A700EB4AAB /* IntervalControlMacaw.swift in Sources */,
+				573525F81E0BD8FC00EB4AAB /* IntervalControl.swift in Sources */,
+				57B9AC1F1E0A679300CE8B56 /* IntervalControlCG.swift in Sources */,
 				57B9AC1D1E0A58DD00CE8B56 /* ViewController.swift in Sources */,
 				57B9AC181E0A58DD00CE8B56 /* AppDelegate.swift in Sources */,
 			);

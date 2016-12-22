@@ -12,7 +12,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Macaw:
-    :commit: 473ecf0eaa63633f845b325d74eefd1f3823cee6
+    :commit: f90172f3c5186e07ec65c0b923624849ed3cfafc
     :git: https://github.com/exyte/Macaw.git
 
 SPEC CHECKSUMS:
