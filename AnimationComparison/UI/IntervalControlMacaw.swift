@@ -10,7 +10,7 @@ import Macaw
 
 class IntervalControlMacaw: MacawView {
     @IBOutlet weak var internalLabel: UILabel?
-    
+
     var value = 0 {
         didSet {
             if value == oldValue {
@@ -34,7 +34,6 @@ class IntervalControlMacaw: MacawView {
 
     
     fileprivate func updateInterval(location: CGPoint) {
-        //let center = CGPoint(x: self.bounds.width / 2.0, y: self.bounds.height / 2.0)
         let rx = self.bounds.width  / 2.0
         let ry = self.bounds.height / 2.0
         let x = Double((location.x - rx) / rx)
@@ -56,11 +55,18 @@ class IntervalControlMacaw: MacawView {
     fileprivate func updateInterval(angle: Double) {
         let restAngle = 2 * M_PI - angle
         let center = CGPoint(x: self.bounds.width / 2.0, y: self.bounds.height / 2.0)
+        let cx = Double(center.x)
+        let cy = Double(center.y)
         let rx = Double(center.x) - 10.0
         let ry = Double(center.y) - 10.0
         let ellipse = Ellipse(cx: Double(center.x), cy: Double(center.y), rx: rx, ry: ry)
  
+        let text = Text(text: "\(value)", font: Font.init(name: "System", size: 38), fill: Color.white)
+        let textCenter = GeomUtils.center(node: text)
+        text.place = Transform.move(dx: cx - textCenter.x, dy: cy - textCenter.y)
+        
         self.node = [
+            text,
             Arc(ellipse: ellipse, shift: -1.0 * M_PI_2, extent: angle)
                 .stroke(fill: Color.rgb(r: 200, g: 200, b: 200), width: 10.0),
             Arc(ellipse: ellipse, shift: -1.0 * M_PI_2 + angle, extent: restAngle)
@@ -70,5 +76,19 @@ class IntervalControlMacaw: MacawView {
     
     fileprivate func updateIntevalLabel(currentValue: Int) {
         internalLabel?.text = "\(currentValue)"
+    }
+    
+    func animate1() {
+        let scale = 0.1
+        let scaleAnimation1 = self.node.placeVar.animation(to: GeomUtils.centerScale(node: self.node, sx: scale, sy: scale), during: 1.0)
+        let scaleAnimation2 = self.node.placeVar.animation(to: Transform.identity, during: 1.0)
+        [
+            scaleAnimation1,
+            scaleAnimation2
+        ].sequence().play()
+    }
+    
+    func animate2() {
+        
     }
 }

@@ -13,6 +13,16 @@ class ViewController: UIViewController {
     @IBOutlet weak var cgControl: IntervalControlCG!
     @IBOutlet weak var macawControl: IntervalControlMacaw!
     
+    @IBAction func animate1() {
+        cgControl.animate1()
+        macawControl.animate1()
+    }
+    
+    @IBAction func animate2() {
+        cgControl.animate2()
+        macawControl.animate2()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
