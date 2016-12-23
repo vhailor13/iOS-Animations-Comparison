@@ -96,23 +96,13 @@ class IntervalControlCG: UIView {
     func animate1() {
         
         let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
-        let scaleAnimation1 = CABasicAnimation(keyPath: "transform")
-        scaleAnimation1.toValue = CATransform3DMakeAffineTransform(scaleTransform)
-        scaleAnimation1.duration = 1.0
-        scaleAnimation1.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        scaleAnimation1.fillMode = kCAFillModeBoth
+        let scaleAnimation = CABasicAnimation(keyPath: "transform")
+        scaleAnimation.toValue = CATransform3DMakeAffineTransform(scaleTransform)
+        scaleAnimation.duration = 1.0
+        scaleAnimation.fillMode = kCAFillModeBoth
+        scaleAnimation.autoreverses = true
         
-        let scaleAnimation2 = CABasicAnimation(keyPath: "transform")
-        scaleAnimation2.toValue = CATransform3DIdentity
-        scaleAnimation2.duration = 1.0
-        scaleAnimation2.beginTime = scaleAnimation1.beginTime + scaleAnimation1.duration
-        scaleAnimation2.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        scaleAnimation2.fillMode = kCAFillModeBoth
-        
-        let animationGroup = CAAnimationGroup()
-        animationGroup.animations = [scaleAnimation1, scaleAnimation2]
-        self.layer.add(animationGroup, forKey: "animation_group")
-        
+        self.layer.add(scaleAnimation, forKey: "scale_animation")
         
     }
     

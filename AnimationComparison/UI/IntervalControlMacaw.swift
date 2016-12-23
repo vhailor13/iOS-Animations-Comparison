@@ -80,12 +80,8 @@ class IntervalControlMacaw: MacawView {
     
     func animate1() {
         let scale = 0.1
-        let scaleAnimation1 = self.node.placeVar.animation(to: GeomUtils.centerScale(node: self.node, sx: scale, sy: scale), during: 1.0)
-        let scaleAnimation2 = self.node.placeVar.animation(to: Transform.identity, during: 1.0)
-        [
-            scaleAnimation1,
-            scaleAnimation2
-        ].sequence().play()
+        let scaleAnimation = self.node.placeVar.animation(to: GeomUtils.centerScale(node: self.node, sx: scale, sy: scale), during: 2.0)
+        scaleAnimation.autoreversed().play()
     }
     
     func animate2() {
