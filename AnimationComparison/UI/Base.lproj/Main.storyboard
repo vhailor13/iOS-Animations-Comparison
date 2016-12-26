@@ -67,9 +67,17 @@
                                     <action selector="animate1" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIO-ga-D85"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auD-Qn-9Tx">
+                                <rect key="frame" x="159" y="236" width="57" height="30"/>
+                                <state key="normal" title="Animate"/>
+                                <connections>
+                                    <action selector="animate2" destination="BYZ-38-t0r" eventType="touchUpInside" id="Afl-Lv-vIt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="auD-Qn-9Tx" firstAttribute="top" secondItem="Kfr-7s-zlk" secondAttribute="bottom" constant="8" id="4wq-Al-f7d"/>
                             <constraint firstItem="Euz-ho-ZnT" firstAttribute="height" secondItem="Mlb-ag-PNq" secondAttribute="height" id="7bn-JU-6et"/>
                             <constraint firstItem="Kfr-7s-zlk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9w2-2Z-7xk"/>
                             <constraint firstItem="Mlb-ag-PNq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="Ghl-ri-z3U"/>
@@ -77,6 +85,7 @@
                             <constraint firstItem="Mlb-ag-PNq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MfS-9t-Z3O"/>
                             <constraint firstItem="Euz-ho-ZnT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="YWL-LD-QTO"/>
                             <constraint firstItem="Kfr-7s-zlk" firstAttribute="top" secondItem="Luc-3a-PTd" secondAttribute="bottom" constant="28" id="aPs-n1-kvB"/>
+                            <constraint firstItem="auD-Qn-9Tx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gi8-MC-KyU"/>
                             <constraint firstItem="Euz-ho-ZnT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="jwi-H0-36o"/>
                             <constraint firstItem="Euz-ho-ZnT" firstAttribute="width" secondItem="Mlb-ag-PNq" secondAttribute="width" id="ua4-tB-mPF"/>
                             <constraint firstItem="Luc-3a-PTd" firstAttribute="leading" secondItem="Mlb-ag-PNq" secondAttribute="trailing" constant="8" id="yG7-yj-NJF"/>

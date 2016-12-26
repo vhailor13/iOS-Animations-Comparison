@@ -99,7 +99,7 @@ class IntervalControlCG: UIView {
         let scaleAnimation = CABasicAnimation(keyPath: "transform")
         scaleAnimation.toValue = CATransform3DMakeAffineTransform(scaleTransform)
         scaleAnimation.duration = 1.0
-        scaleAnimation.fillMode = kCAFillModeBoth
+        scaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         scaleAnimation.autoreverses = true
         
         self.layer.add(scaleAnimation, forKey: "scale_animation")

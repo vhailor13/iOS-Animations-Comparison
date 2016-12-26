@@ -53,6 +53,10 @@ class IntervalControlMacaw: MacawView {
     }
     
     fileprivate func updateInterval(angle: Double) {
+        self.node = contentNode(angle: angle).group()
+    }
+    
+    fileprivate func contentNode(angle: Double) -> [Node] {
         let restAngle = 2 * M_PI - angle
         let center = CGPoint(x: self.bounds.width / 2.0, y: self.bounds.height / 2.0)
         let cx = Double(center.x)
@@ -60,18 +64,18 @@ class IntervalControlMacaw: MacawView {
         let rx = Double(center.x) - 10.0
         let ry = Double(center.y) - 10.0
         let ellipse = Ellipse(cx: Double(center.x), cy: Double(center.y), rx: rx, ry: ry)
- 
+        
         let text = Text(text: "\(value)", font: Font.init(name: "System", size: 38), fill: Color.white)
         let textCenter = GeomUtils.center(node: text)
         text.place = Transform.move(dx: cx - textCenter.x, dy: cy - textCenter.y)
         
-        self.node = [
+        return  [
             text,
             Arc(ellipse: ellipse, shift: -1.0 * M_PI_2, extent: angle)
                 .stroke(fill: Color.rgb(r: 200, g: 200, b: 200), width: 10.0),
             Arc(ellipse: ellipse, shift: -1.0 * M_PI_2 + angle, extent: restAngle)
                 .stroke(fill: Color.white, width: 10.0)
-            ].group()
+        ]
     }
     
     fileprivate func updateIntevalLabel(currentValue: Int) {
@@ -79,12 +83,17 @@ class IntervalControlMacaw: MacawView {
     }
     
     func animate1() {
-        let scale = 0.1
-        let scaleAnimation = self.node.placeVar.animation(to: GeomUtils.centerScale(node: self.node, sx: scale, sy: scale), during: 2.0)
+        let scaleAnimation = self.node.placeVar.animation(to: GeomUtils.centerScale(node: self.node, sx: 0.1, sy: 0.1), during: 2.0).easing(.easeOut)
         scaleAnimation.autoreversed().play()
     }
     
     func animate2() {
+        guard let rootNode = self.node as? Group else {
+            return
+        }
         
+        rootNode.contentsVar.animate({ t -> [Node] in
+            return self.contentNode(angle: 2 * M_PI * t)
+        }, during: 2.0)
     }
 }
